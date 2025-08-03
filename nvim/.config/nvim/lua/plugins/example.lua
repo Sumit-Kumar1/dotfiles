@@ -37,6 +37,7 @@ return {
   },
   {
     "mason-org/mason.nvim",
+    version = "v2.*",
     opts = {
       ui = {
         icons = {
