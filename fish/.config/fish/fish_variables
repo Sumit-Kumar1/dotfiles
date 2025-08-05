@@ -1,6 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR DOCKER_HOST:unix\x3a///Users/zop1064/\x2erd/docker\x2esock
 SETUVAR GO111MODULE:on
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:brblack
@@ -31,4 +30,3 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Users/zop1064/\x2erd/bin\x1e/Users/zop1064/go/bin\x1e/Users/zop1064/\x2eqlty/bin
