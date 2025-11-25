@@ -6,6 +6,18 @@ config.set_environment_variables = {
 	PATH = "/opt/homebrew/bin:" .. os.getenv("PATH"),
 }
 
+config.ssh_domains = {
+	{
+		name = "oci_server",
+		remote_address = "80.225.197.249",
+		username = "opc",
+		timeout = 60,
+		default_prog = { "zsh" },
+		ssh_option = {
+			identityfile = "~/.ssh/id_rsa_oci",
+		},
+	},
+}
 local function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
 		return "Catppuccin Macchiato"
