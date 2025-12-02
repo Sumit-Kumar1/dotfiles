@@ -65,8 +65,8 @@ config.colors = {
     },
 }
 -- opacity
-config.window_background_opacity = 0.3
-config.macos_window_background_blur = 20
+config.window_background_opacity = 0.75
+config.macos_window_background_blur = 35
 
 -- Inactive panes.
 config.inactive_pane_hsb = {
@@ -87,7 +87,7 @@ config.cursor_thickness = 1
 config.hide_tab_bar_if_only_one_tab = true
 config.window_frame = {
     font = wezterm.font('Hasklug Nerd Font Mono', { weight = 'DemiBold' }),
-    font_size = on_mac and 14 or 18,
+    font_size = on_mac and 15 or 18,
     active_titlebar_bg = colors.bg,
     inactive_titlebar_bg = colors.bg,
 }
