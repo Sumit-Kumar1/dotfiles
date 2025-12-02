@@ -9,19 +9,14 @@ return {
   ---@module 'avante'
   ---@type avante.Config
   opts = {
+    -- add any opts here
+    -- this file can contain specific instructions for your project
+    instructions_file = "avante.md",
     provider = "ollama",
     providers = {
       ollama = {
-        endpoint = "http://localhost:11434",
-        model = "deepseek-v3.1:671b-cloud",
-        keep_alive = "5m",
-        extra_request_body = {
-          temperature = 0.25, -- creativity (0-2)
-          max_tokens = 2048, -- hard limit for a single answer
-          top_p = 0.95, -- nucleus sampling
-          top_k = 40, -- top-k sampling
-        },
-        disable_tools = false,
+        endpoint = "http://127.0.0.1:11434",
+        model = "minimax-m2:cloud",
       },
     },
   },

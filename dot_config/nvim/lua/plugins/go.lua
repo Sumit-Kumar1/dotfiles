@@ -13,6 +13,7 @@ return {
           settings = {
             gopls = {
               gofumpt = true,
+              goimports = true,
               codelenses = {
                 gc_details = false,
                 generate = true,
