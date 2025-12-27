@@ -15,7 +15,7 @@ return {
                 test = true,
                 tidy = true,
                 upgrade_dependency = true,
-                vendor = false,
+                vendor = true,
               },
               hints = {
                 assignVariableTypes = true,
