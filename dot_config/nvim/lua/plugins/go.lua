@@ -6,7 +6,10 @@ return {
         gopls = {
           settings = {
             gopls = {
-              gofumpt = true,
+              init_options = {
+                providerFormatter = false,
+              },
+              gofumpt = false,
               codelenses = {
                 gc_details = false,
                 generate = true,
@@ -30,7 +33,9 @@ return {
                 nilness = true,
                 unusedparams = true,
                 unusedwrite = true,
-                useany = true,
+                useany = false,
+                ST1000 = false,
+                ST1020 = false,
               },
               usePlaceholders = true,
               completeUnimported = true,
