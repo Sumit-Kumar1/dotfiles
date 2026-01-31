@@ -2,8 +2,11 @@ return {
   {
     "mfussenegger/nvim-lint",
     opts = {
+      linters_by_ft = {
+        go = { "golangci-lint" },
+      },
       linters = {
-        golangcilint = {
+        ["golangci-lint"] = {
           args = {
             "run",
             "--out-format",
