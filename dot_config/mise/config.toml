@@ -1,10 +1,13 @@
 [tools]
+fastfetch = "latest"
 fzf = "latest"
+glow = "latest"
 go = "latest"
 golangci-lint = "latest"
 java = "latest"
 lazydocker = "latest"
 lazygit = "latest"
+lefthook = "latest"
 neovim = "latest"
 node = "lts"
 python = "3.14"
