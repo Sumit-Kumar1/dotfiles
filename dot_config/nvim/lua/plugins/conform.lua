@@ -3,7 +3,7 @@ return {
   opts = {
     formatters_by_ft = {
       -- use goimports / gofumpt for formatting
-      go = { "golangci-lint", "goimports", "gofmt" },
+      go = { "goimports", "golangci-lint", "gofmt" },
       php = { "pint" }, -- Prioritizes Pint for formatting .php files
     },
     format_on_save = {

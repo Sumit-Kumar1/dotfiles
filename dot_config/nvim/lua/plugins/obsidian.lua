@@ -1,5 +1,5 @@
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim", -- moved from epwalsh/obsidian.nvim, which stalled at v3.9.0
   version = "*", -- Recommended to use the latest release
   lazy = true,
   -- Ensure it loads for markdown files or when triggered by LazyVim's telescope
@@ -15,8 +15,6 @@ return {
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "hrsh7th/nvim-cmp",
-    "nvim-telescope/telescope.nvim",
   },
   keys = {
     { "<leader>on", "<cmd>ObsidianNew<cr>", desc = "New Obsidian Note" },
@@ -38,11 +36,14 @@ return {
     },
   },
   opts = {
+    picker = {
+      name = "snacks.picker",
+    },
     workspaces = {
       {
         name = "ZK-Vault",
         -- Change this to the exact path of your actual Obsidian Vault
-        path = "~/path/to/your/obsidian/vault",
+        path = "~/Obsidian/",
       },
     },
 
@@ -62,21 +63,17 @@ return {
       return tostring(os.time()) .. "-" .. suffix
     end,
 
-    -- Integrates with nvim-cmp for auto-completing [[links]]
-    completion = {
-      nvim_cmp = true,
-      min_chars = 2,
-    },
-
     -- Optional: Configures how frontmatter is structured
-    note_frontmatter_func = function(note)
-      local out = { id = note.id, aliases = note.aliases, tags = note.tags }
-      if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
-        for k, v in pairs(note.metadata) do
-          out[k] = v
+    frontmatter = {
+      func = function(note)
+        local out = { id = note.id, aliases = note.aliases, tags = note.tags }
+        if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+          for k, v in pairs(note.metadata) do
+            out[k] = v
+          end
         end
-      end
-      return out
-    end,
+        return out
+      end,
+    },
   },
 }
